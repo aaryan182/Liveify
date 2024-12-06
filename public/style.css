@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: radial-gradient(circle, #111 30%, #000);
+  color: #00bfff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 90%;
+  max-width: 800px;
+  text-align: center; 
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #00bfff;
+  text-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff, 0 0 45px #33ccff,
+    0 0 60px #33ccff;
+}
+
+.tagline {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #00bfff;
+  text-shadow: 0 0 5px #00bfff, 0 0 10px #33ccff;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #33ccff,
+      0 0 40px #33ccff;
+  }
+  50% {
+    text-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff, 0 0 45px #33ccff,
+      0 0 60px #33ccff;
+  }
+}
+
+video {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  border: 10px solid #00bfff;
+  box-shadow: 0 0 15px #00bfff, 0 0 30px #33ccff, 5px 5px 15px #222 inset;
+  transform: rotateX(10deg) rotateY(-15deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+video:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+  box-shadow: 0 0 25px #00bfff, 0 0 50px #33ccff, 5px 5px 20px #333 inset;
+}
+
+button {
+  font-size: 1rem;
+  color: #000;
+  background: linear-gradient(90deg, #00bfff, #0099cc);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #33ccff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00bfff, 0 0 40px #33ccff;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.container .video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  video {
+    max-width: 250px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
